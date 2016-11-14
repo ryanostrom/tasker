@@ -1,0 +1,126 @@
+@-ms-viewport { width: device-width; }
+
+body { margin: 0; /** background: $charcoal; */ }
+main {
+  background: $white;
+  position: relative;
+
+  @include media($tablet) {
+    // top: 65px;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $light-gray;
+  }
+}
+
+h1 { font-family: Brandon-Thin; }
+h2, p, li { font-family: Brandon; }
+h3 { font-family: Brandon-Light; }
+h4 { font-family: Brandon-Light-Italic; }
+
+.input {
+  height: auto;
+  &.h3 {
+    font-size: 42px;
+    &::-webkit-input-placeholder { /* Chrome */
+      color: $dark-gray;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $dark-gray;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $dark-gray;
+      opacity: 1;
+    }
+    &:-moz-placeholder { /* Firefox 4 - 18 */
+      color: $dark-gray;
+      opacity: 1;
+    }
+  }
+  &.h5 {
+    font-size: 24px !important;
+    &::-webkit-input-placeholder { /* Chrome */
+      color: $gravel;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $gravel;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $gravel;
+      opacity: 1;
+    }
+    &:-moz-placeholder { /* Firefox 4 - 18 */
+      color: $gravel;
+      opacity: 1;
+    }
+  }
+}
+
+.form__control {
+  display: block;
+  width: 100%;
+
+  p {
+    position: relative;
+    margin-top: -40px;
+    margin-right: 12px;
+    color: $red;
+    text-align: right;
+    pointer-events: none;
+  }
+}
+
+.form { width: 100%; }
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+  opacity: 0.15;
+  position: absolute;
+  top: 0;
+}
+
+.tabs.secondary {
+  background: $speckle;
+  border-right: 1px solid $white;
+}
+
+.full-width { width: 100%; }
+.inline { display: inline-block; }
+.center { text-align: center; }
+.align-right { text-align: right; }
+.fa {
+  cursor: pointer !important;
+  pointer-events: auto;
+}
+
+#icon-group {
+  margin-top: -47px;
+  padding-right: 12px;
+  pointer-events: none;
+
+  .fa {
+    font-size: 24px;
+  }
+}
+.fa-check-square-o {
+  color: $green;
+}
+.fa-close {
+  color: $red;
+}
+
+#task {
+  margin-bottom: 8px;
+}
+
+.task-complete {
+  text-decoration: line-through;
+}
+
+.bk-green {
+  background: $green;
+}

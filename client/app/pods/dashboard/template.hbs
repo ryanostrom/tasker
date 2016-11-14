@@ -1,0 +1,33 @@
+{{#container-wide}}
+  <p class="float-right">{{user.name_first}} {{user.name_last}}</p>
+  <h2>Task List</h2>
+  <table class="row marauto">
+    {{#each clients as |client clientIndex|}}
+    <div class="tabs small-12 padleft-1 padright-1 padtop-2 padbot-2 secondary">
+      <i class="fa fa-close float-right marbot-1 marright-1" {{action 'removeClient' clientIndex}}></i>
+      <div class="marbot-1">{{input name="client" value=client.client type="text" class="h3 input" placeholder="Client"}}</div>
+      <div>
+        {{input name="team" value=client.team type="text" class="small-12 h5 input" placeholder="Team Members..."}}
+        {{#each client.tasks as |task taskIndex|}}
+          <div id="task" class="align-right">
+            {{#if task.complete}}
+              {{input name="value" value=task.value class="task-complete" readonly="true" type="text"}}
+            {{else}}
+              {{input name="value" value=task.value type="text"}}
+            {{/if}}
+            <div id="icon-group">
+              <i class="fa fa-check-square-o marright-1" {{action 'completeTask' clientIndex taskIndex}}></i>
+              <i class="fa fa-close" {{action 'removeTask' clientIndex taskIndex}}></i>
+            </div>
+          </div>
+        {{/each}}
+        <div class="small-12 martop-2">
+          <a class="button secondary hollow small float-right marbot-0" {{action "addTask" client clientIndex}}><i class="fa fa-plus"></i>&nbsp;Task</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </table>
+  <a class="button full-width float-right martop-1 marbot-0" {{action "addClient"}}><i class="fa fa-plus"></i>&nbsp;Client</a>
+  <a class="button full-width float-right martop-1 bk-green marbot-0" {{action "save"}}>Save</a>
+{{/container-wide}}

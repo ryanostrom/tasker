@@ -1,0 +1,11 @@
+<div class="row">
+  <div id="invalid-login" class="small-12 marbot-2 padall-1 callout alert {{if hasNoError 'hide'}}">Your email or password is invalid.</div>
+  {{input class="marbot-1" value=email placeholder="Email" autofocus="true"}}
+  {{input class="marbot-1" value=password placeholder="Password" type="password"}}
+  <div class="small-12">
+    <div class="small-12 medium-8 large-pull-8 float-right button expanded primary" {{action 'login'}}>Login!</div>
+    <div class="small-12 medium-4 large-push-4">
+      {{#link-to 'signup' class="small-12 medium-11 button expanded primary hollow"}}Signup!{{/link-to}}
+    </div>
+  </div>
+</div>

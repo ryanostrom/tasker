@@ -1,0 +1,138 @@
+section {
+  width: 100%;
+  margin: auto;
+  padding: 16px 24px 48px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  @include media($tablet) {
+    background-attachment: fixed;
+  }
+
+  &.cover {
+    background-position: center center;
+    display: table;
+    max-width: initial;
+    padding: 32px 0;
+
+    &.splash {
+      padding: 144px 0 !important;
+    }
+
+    &.hero {
+      height: 40vh;
+      background-attachment: initial;
+
+      @include media($tablet) {
+        min-height: 500px;
+        height: 75vh;
+      }
+    }
+
+    h2 {
+      color: $white;
+      font-size: 32px;
+      font-family: Brandon-Light;
+      background: transparent;
+      border-bottom: none;
+
+      @include media($tablet) {
+        font-size: 2.5rem;
+        font-family: Brandon-Black;
+      }
+    }
+
+    span {
+      text-transform: initial;
+      font-family: Brandon;
+      background: rgba(65, 62, 62, 0.65);
+      color: $white;
+      border-top: 1px solid $light-gray;
+      border-bottom: 1px solid $light-gray;
+
+      @include media($tablet) {
+        text-transform: uppercase;
+        background: transparent;
+        font-family: Brandon-Black;
+        color: $charcoal;
+      }
+    }
+
+    &#home {
+      background-image: url('images/hero-background.jpeg');
+    }
+
+    h3 {
+      color: $white;
+      text-transform: uppercase;
+      font-family: Brandon-Black;
+    }
+  }
+
+  .center {
+    display: table-cell;
+    vertical-align: middle;
+    height: auto;
+    position: relative;
+    text-align: center;
+
+    @include media($tablet) {
+      vertical-align: initital;
+      padding: 0;
+      position: absolute;
+      top: 25%;
+      left: 3%;
+    }
+  }
+
+  h2 {
+    font-family: Brandon-Black;
+    color: $dark-blue;
+    background: rgba(255, 255, 255, 0.34);
+    border-radius: 6px;
+    padding: 12px 0 18px;
+    margin: auto;
+    font-weight: 300;
+    line-height: 1;
+
+    @include media($tablet) {
+      width: 400px;
+      padding: 12px 0;
+      background: none;
+    }
+  }
+
+  h3 {
+    font-family: Brandon;
+    color: $charcoal;
+    font-size: 2rem;
+    font-weight: 300;
+    color: $dark-gray;
+    text-align: center;
+  }
+
+  span {
+    font-family: Brandon-Black;
+    color: $charcoal;
+    font-size: 16px;
+    display: block;
+    padding: 12px 0;
+    text-transform: uppercase;
+
+    @include media($tablet) {
+      padding: 0 0 12px;
+    }
+  }
+
+  p {
+    font-family: Brandon-Light;
+    font-size: 1.2rem;
+    color: $gravel;
+    text-align: center;
+  }
+}
